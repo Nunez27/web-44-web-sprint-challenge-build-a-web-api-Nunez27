@@ -77,5 +77,11 @@ router.put('/api/actions/:id', async (req, res) => {
 });
 
 router.use((err, req, res) => {
-    res.status(500).json({message: 'Something went wrong'}, err: err.message)
-});
+    res.status(500).json({
+        message: 'Something went wrong', 
+        err: err.message
+    })
+})
+
+
+module.exports = router;
